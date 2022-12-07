@@ -18,6 +18,14 @@ const ctx = canvas.getContext('2d');
 // reset button
 function resetV(){
   img.style.filter = 'none';
+  // ctx.saturate(100);
+  // ctx.contrast(100);
+  // ctx.brightness(100);
+  // ctx.sepia(0);
+  // ctx.grayscale(0);
+  // ctx.blur(0);
+  // ctx.rotate(0);
+  ctx.reset();
   saturate.value = '100';
   contrast.value = '100';
   brightness.value = '100';
@@ -25,6 +33,7 @@ function resetV(){
   grayscale.value = '0';
   blur.value = '0';
   rotate.value = '0';
+  uploadImg();
 }
 
 // set the default values
@@ -40,6 +49,10 @@ upload.onchange = function(){
   download.style.display = 'block';
   reset.style.display = 'block';
   box.style.display = 'block';
+  uploadImg();
+}
+
+function uploadImg() {
   // read the image in the image box
   let file = new FileReader();
   file.readAsDataURL(upload.files[0]);
@@ -53,7 +66,7 @@ upload.onchange = function(){
     ctx.drawImage(img,0,0,canvas.width,canvas.height);
     img.style.display = 'none';
   }
-}
+};
 
 // make the filters and save it for canvas
 let filters = document.querySelectorAll('ul li input');
