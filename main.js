@@ -18,13 +18,6 @@ const ctx = canvas.getContext('2d');
 // reset button
 function resetV(){
   img.style.filter = 'none';
-  // ctx.saturate(100);
-  // ctx.contrast(100);
-  // ctx.brightness(100);
-  // ctx.sepia(0);
-  // ctx.grayscale(0);
-  // ctx.blur(0);
-  // ctx.rotate(0);
   ctx.reset();
   saturate.value = '100';
   contrast.value = '100';
