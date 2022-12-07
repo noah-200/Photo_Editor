@@ -13,15 +13,18 @@ body {
   width: 100vw;
   min-height: 100vh;
 }
+a {
+  text-decoration: none;
+}
 .container {
   background: #222;
   width: 80vw;
   padding: 20px;
-  border-radius: 10px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
+  border-radius: 10px;
   display: grid;
   grid-template-columns: 5fr 3fr;
 }
@@ -74,9 +77,11 @@ canvas {
   .container {
     grid-template-columns: 1fr;
     gap: 50px;
+    margin: 40px 0;
   }
   .container .img img,
   canvas {
+    width: -moz-fit-content;
     width: fit-content;
     max-width: 70vw;
   }
